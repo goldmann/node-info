@@ -1,0 +1,12 @@
+<jboss-web>
+  <context-root>/node-info</context-root>
+  <replication-config>
+    <!-- The default value is SET_AND_NON_PRIMITIVE_GET, therefore the byte array which is carrying the data is considered
+non-primitive and would cause replication even in read only scenario. -->
+    <!--<replication-trigger>SET</replication-trigger>
+        -->
+    <!-- Replicating entire session is the default. -->
+    <replication-granularity>SESSION</replication-granularity>
+    <replication-mode>SYNCHRONOUS</replication-mode>
+  </replication-config>
+</jboss-web>
